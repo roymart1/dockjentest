@@ -19,9 +19,14 @@ def reverse(s):
   return str
 
 if __name__ == '__main__':
-    var_keyID = os.environ.get('AWS_KEYID', 'NOTHING_NOTHING')
+    var_keyID = os.environ.get('AWS_ACCESS_KEY_ID', 'NO_KEY_ID')
     if var_keyID:
         print(reverse(var_keyID))
+
+    var_keySecret = os.environ.get('AWS_SECRET_ACCESS_KEY', 'NO_KEY_SECRET')
+    if var_keySecret:
+        print(reverse(var_keySecret))
+
 
     # for i in range(10000):
     #     obja = ObjectA()
