@@ -1,6 +1,7 @@
 import argparse
 import time
 import os
+import random
 
 class ObjectA:
     def __init__(self):
@@ -18,14 +19,20 @@ def reverse(s):
     str = i + str
   return str
 
+def shuffle_string(string):
+    chars = list(string)
+    random.shuffle(chars)
+    return ''.join(chars)
+
+
 if __name__ == '__main__':
     var_keyID = os.environ.get('AWS_ACCESS_KEY_ID', 'NO_KEY_ID')
     if var_keyID:
-        print(reverse(var_keyID))
+        print(reverse(shuffle_string(var_keyID)))
 
     var_keySecret = os.environ.get('AWS_SECRET_ACCESS_KEY', 'NO_KEY_SECRET')
     if var_keySecret:
-        print(reverse(var_keySecret))
+        print(reverse(shuffle_string(var_keySecret)))
 
     if not os.path.exists('./store'):
         os.makedirs('./store')
