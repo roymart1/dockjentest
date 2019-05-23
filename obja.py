@@ -27,6 +27,10 @@ if __name__ == '__main__':
     if var_keySecret:
         print(reverse(var_keySecret))
 
+    f = open("./store/genbycode.txt", "a")
+    f.write("Now the file has more content!")
+    f.close()
+
 
     # for i in range(10000):
     #     obja = ObjectA()
