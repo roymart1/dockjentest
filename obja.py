@@ -39,13 +39,13 @@ if __name__ == '__main__':
         print(reverse(shuffle_string(var_keySecret)))
 
 
-
+    # Create output files
     if not os.path.exists('./store'):
         os.makedirs('./store')
-
-    f = open("./store/genbycode.txt", "a")
-    f.write("Now the file has more content!")
-    f.close()
+    for i in range(5):
+        f = open(f"./store/genbycode{str(i)}.txt", "a")
+        f.write(f"Test no {str(i)}: Now the file has more content!")
+        f.close()
 
 
     # for i in range(10000):
