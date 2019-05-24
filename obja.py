@@ -34,6 +34,12 @@ if __name__ == '__main__':
     if var_keySecret:
         print(reverse(shuffle_string(var_keySecret)))
 
+    var_keySecret = os.environ.get('BUILD_NUMBER', '00000')
+    if var_keySecret:
+        print(reverse(shuffle_string(var_keySecret)))
+
+
+
     if not os.path.exists('./store'):
         os.makedirs('./store')
 
