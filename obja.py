@@ -27,16 +27,13 @@ def shuffle_string(string):
 
 if __name__ == '__main__':
     var_keyID = os.environ.get('AWS_ACCESS_KEY_ID', 'NO_KEY_ID')
-    if var_keyID:
-        print(reverse(shuffle_string(var_keyID)))
+    print(reverse(shuffle_string(var_keyID)))
 
     var_keySecret = os.environ.get('AWS_SECRET_ACCESS_KEY', 'NO_KEY_SECRET')
-    if var_keySecret:
-        print(reverse(shuffle_string(var_keySecret)))
+    print(reverse(shuffle_string(var_keySecret)))
 
-    var_keySecret = os.environ.get('BUILD_NUMBER', '00000')
-    if var_keySecret:
-        print(reverse(shuffle_string(var_keySecret)))
+    var_buildnumber = os.environ.get('BUILD_NUMBER', '00000')
+    print(var_buildnumber)
 
 
     # Create output files
