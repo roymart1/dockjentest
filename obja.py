@@ -39,7 +39,12 @@ if __name__ == '__main__':
     # Create output files
     if not os.path.exists('./store'):
         os.makedirs('./store')
-    for i in range(5):
-        f = open(f"./store/genbycode{str(i)}.txt", "a")
+    for i in range(3):
+        f = open(f"./store/datafile{str(i)}.csv", "a")
         f.write(f"Test no {str(i)}: Now the file has more content!")
+        f.close()
+
+    for i in range(3):
+        f = open(f"./store/imagefile{str(i)}.png", "a")
+        f.write(f"Test no {str(i)}: This file is a great image!")
         f.close()
