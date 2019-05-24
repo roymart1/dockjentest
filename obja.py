@@ -43,15 +43,3 @@ if __name__ == '__main__':
         f = open(f"./store/genbycode{str(i)}.txt", "a")
         f.write(f"Test no {str(i)}: Now the file has more content!")
         f.close()
-
-
-    # for i in range(10000):
-    #     obja = ObjectA()
-    #     obja.callMe()
-    #     time.sleep(0.5)
-    #
-    # parser = argparse.ArgumentParser(description='Short sample app')
-    # parser.add_argument('-a', action="store_true", default=False)
-    # parser.add_argument('-b', action="store", dest="b")
-    # parser.add_argument('-c', action="store", dest="c", type=int)
-    # parser.parse_args(['-a', '-bval', '-c', '3'])
